@@ -2,7 +2,7 @@ import unittest
 import task2
 
 
-class MyTestCase(unittest.TestCase):
+class Task2TestCase(unittest.TestCase):
     def test_trim(self):
         self.assertEquals(task2.trim("xxxxfexxxxaixxx"), "xxxx")
         self.assertEquals(task2.trim("xxfesssaiaifeai"), "sss")
