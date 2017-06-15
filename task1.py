@@ -4,6 +4,7 @@ class Launch:
         self.month = month
         self.succ = succ
     def __str__(self):
+        return str(self.month) + "." + str(self.year) + ", succ: " + str(self.succ)
 
 
 l = Launch(15,15,True)
