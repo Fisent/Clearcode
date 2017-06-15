@@ -9,3 +9,9 @@ class Launch:
 
 l = Launch(15,15,True)
 print(l)
+
+def group_by(stream):
+    for line in stream:
+        print(line)
+
+group_by(open("launchlog.txt"))

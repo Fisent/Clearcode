@@ -11,6 +11,9 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(task2.damage("fexxxx"), -1)
         self.assertEquals(task2.damage("aaa"), -1)
         print("damage OK")
+    def test_is_correct(self):
+        self.assertEquals(task2.is_correct("xxxxxfejejeeaindaiyaiaixxxxxx"), True)
+        self.assertEquals(task2.is_correct(), True)
 
 
 if __name__ == '__main__':
