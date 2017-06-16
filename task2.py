@@ -2,15 +2,26 @@ import functools
 
 SPELL_BOOK = {"fe":1, "je":2, "jee":3, "ain":3, "dai":5, "ne":2, "ai":2 }
 
-
+'''
 def custom_comparator(x, y):
     if SPELL_BOOK[x] > SPELL_BOOK[y]:
         return 1
     else:
         return -1
+'''
+
+def custom_comparator(x,y):
+    if len(x) < len(y):
+        if SPELL_BOOK[x] < SPELL_BOOK[y]:
+            return 1
+        else:
+            return -1
+    else:
+        return -1
 
 sorted_keys = list(SPELL_BOOK.keys())
 sorted_keys.sort(key=functools.cmp_to_key(custom_comparator))
+print(sorted_keys)
 
 def is_correct(spell):
     start = spell.find("fe")
