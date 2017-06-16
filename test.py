@@ -5,15 +5,23 @@ import task2
 class Task2TestCase(unittest.TestCase):
     def test_trim(self):
         self.assertEquals(task2.trim("xxxxfexxxxaixxx"), "xxxx")
-        self.assertEquals(task2.trim("xxfesssaiaifeai"), "sss")
+        self.assertEquals(task2.trim("feaineain"), "aine")
         print("trim OK")
+
     def test_damage(self):
-        self.assertEqual(task2.damage("fexxxx"), -1)
-        self.assertEquals(task2.damage("aaa"), -1)
+        self.assertEqual(task2.damage("fexxxx"), 0)
+        self.assertEquals(task2.damage("aaa"), 0)
+        self.assertEquals(task2.damage('feeai'), 2)
+        self.assertEquals(task2.damage('feaineain'), 7)
+        self.assertEquals(task2.damage('jee'), 0)
+        self.assertEquals(task2.damage('fdafafeajain)'), 1)
+        self.assertTrue(task2.damage('fexxxxxxxxxxai') == 0)
         print("damage OK")
+
     def test_is_correct(self):
         self.assertEquals(task2.is_correct("xxxxxfejejeeaindaiyaiaixxxxxx"), True)
-        self.assertEquals(task2.is_correct(), True)
+        self.assertTrue(task2.is_correct("feeai"))
+        print("is correct OK")
 
 
 if __name__ == '__main__':
