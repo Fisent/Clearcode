@@ -53,7 +53,6 @@ def trim(spell):
 
 
 def damage_inner(spell):
-
     if is_correct(spell):
         spell = trim(spell)
     else:
