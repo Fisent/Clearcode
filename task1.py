@@ -47,3 +47,6 @@ def group_by(stream, field, succ):
 
 print(group_by(open("launchlog.txt"), "month", False))
 print(group_by(open("launchlog.txt"), "year", False))
+
+print(group_by(open("launchlog.txt"), "month", True))
+print(group_by(open("launchlog.txt"), "year", True))
