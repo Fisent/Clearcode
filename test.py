@@ -18,6 +18,7 @@ class Task2TestCase(unittest.TestCase):
         self.assertEquals(task2.damage('fexxxxxxxxxxai'), 0)
         self.assertEquals(task2.damage('fedaiai'), 8)
         self.assertEquals(task2.damage('feainjeeai'),9)
+        self.assertEquals(task2.damage('feainjeeainai'), 12)
         print("damage OK")
 
     def test_is_correct(self):
